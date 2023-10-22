@@ -1,0 +1,11 @@
+09-01 21:44 [INFO | bolt.plugins] : Registered entry point backend.torch.50_register (function: bolt.backends.torch.plugin.register_torch)
+09-01 21:44 [INFO | bolt.plugins] : Registered entry point backend.torch.75_configure (function: bolt.backends.torch.plugin.configure_torch)
+09-01 21:44 [DEPRECATION | bolt.applications.object_detection] : bgscore_threshold is deprecated, use bg_filter instead. The old parameterization is supported until 31.01.2024.
+09-01 21:44 [WARNING | bolt.applications.object_detection] : Using object_detection.v1 defining resolutions will not have any effect.
+09-01 21:44 [INFO | bolt.applications.object_detection] : Loading annotations...
+09-01 21:46 [DEBUG | bolt.applications.object_detection] : The resulting class mapping is: {'person': 'person', 'ignored': 'ignored', 'ignore': 'ignored', 'group': 'ignored', 'rider': 'ignored', 'sitting_person': 'ignored', 'other': 'ignored'}
+09-01 21:56 [INFO | bolt.applications.object_detection] : Filtering annotations...
+09-01 21:56 [INFO | bolt.applications.object_detection] : done (115200 samples in total, 113974 positives (2473514 objects), keypoints_3d (22 keypoints), bbox_coords (2 keypoints), 2 classes, keypoints (22 keypoints), keypoints_3d (22 keypoints), occlusion (1 float), occlusion_est (1 float), truncation (1 float), vis_ratio (1 float))
+09-01 21:56 [INFO | bolt.data] : DataGenerator: Using ordered sample list
+09-01 21:56 [INFO | bolt.applications.object_detection] : Loading annotations...
+09-01 22:00 [DEBUG | bolt.applications.object_detection] : The resulting class mapping is: {'person': 'person', 'ignored': 'ignored', 'ignore': 'ignored', 'group': 'ignored', 'rider': 'ignored', 'sitting_person': 'ignored', 'other': 'ignored'}

@@ -1,0 +1,20 @@
+################################## ATTENTION #############################
+# This file must be the same under "all packages/bolt-*" directories.    #
+# Edits must only be done to "packages/bolt-core/pyproject.toml".        #
+# Any changes are propagated to the other packages by a pre-commit hook. #
+##########################################################################
+
+[build-system]
+# Defined by PEP 518
+# We delegate the creation of wheels to pants using subprocess, then use wheel to create the editable wheel
+requires = ["wheel"]
+
+# Defined by PEP 517
+# Use our own backend contained in build_backend.py
+build-backend = "build_backend"
+backend-path = ["."]
+
+[tool.black]
+# The configuration of black must be replicated in every pyproject.toml file.
+line-length = 120
+target-version = ['py38']

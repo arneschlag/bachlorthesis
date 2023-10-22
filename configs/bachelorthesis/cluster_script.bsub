@@ -1,0 +1,24 @@
+#
+#BSUB -q rb_short                 # fill in queue name (rb_regular, rb_large, ...)
+#BSUB -J bachelor_jta_3d       # job name
+
+#BSUB -e /home/scl9hi/LSF/bachelor_jta_3d.stderr             # optional: Have errors written to specific file
+#BSUB -o /home/scl9hi/LSF/bachelor_jta_3d.stdout             # optional: Have output written to specific file
+#BSUB -W 2:00                 # optional: fill in desired wallclock time (hours are optional). If omitted, one week is assumed
+#BSUB -M 50G                        # fill in required amount of RAM (in Mbyte)
+#BSUB -gpu num=1:mode=exclusive_process   # use n GPU (in exclusive process mode)
+
+#BSUB -R span[hosts=1]                    # Ensure the job only runs on one server
+
+# #BSUB -Is                               # optional: submit an interactive job
+# BSUB -m "pascal_12g"                      # optional: submit job to specific nodes, rtx stands for RTX 2080Ti node group, pascal for GTX 1080 Ti, compute for both
+# # BSUB -m "hi-036l"      # just to run on the hi-036l
+# # BSUB -m "hi-032l"
+
+# Load Modules
+
+# source /home/scl9hi/bachelorthesis/bolt/bin/activate
+
+
+# Here comes your code. These are just regular bash commands
+python3 /home/scl9hi/bachelorthesis/bolt_mfsd/configs/bachelorthesis/main_learning.py
